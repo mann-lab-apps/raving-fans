@@ -45,18 +45,22 @@ export default function Home() {
     if (!data) return;
 
     setIsLoading(true);
-    const newData = { ...data };
-    const index = newData.pairs.findIndex((p) => p.id === activeTab);
     
-    if (index !== -1) {
-      if (target === 'provider') {
-        newData.pairs[index].providerVision = tempVision;
-        setEditingProvider(false);
-      } else {
-        newData.pairs[index].customerVision = tempVision;
-        setEditingCustomer(false);
+    // 불변성을 유지하며 데이터 업데이트
+    const updatedPairs = data.pairs.map((p) => {
+      if (p.id === activeTab) {
+        return {
+          ...p,
+          [target === 'provider' ? 'providerVision' : 'customerVision']: tempVision,
+        };
       }
-    }
+      return p;
+    });
+
+    const newData = { ...data, pairs: updatedPairs };
+
+    if (target === 'provider') setEditingProvider(false);
+    else setEditingCustomer(false);
 
     try {
       const res = await fetch('http://localhost:8000/api/visions', {
