@@ -1,0 +1,26 @@
+{
+  "provider": {
+    "name": "나 (1인 기업가)",
+    "vision": "수정된 비전 테스트"
+  },
+  "customers": [
+    {
+      "id": "family",
+      "name": "가족",
+      "vision": "서로의 꿈을 지지하고 평온한 안식처가 되는 관계",
+      "status": "aligned"
+    },
+    {
+      "id": "company",
+      "name": "회사",
+      "vision": "최고의 기술적 탁월함으로 동료들의 신뢰를 얻는 파트너",
+      "status": "pending"
+    },
+    {
+      "id": "friends",
+      "name": "친구",
+      "vision": "언제든 기댈 수 있고 함께 성장하는 즐거운 동반자",
+      "status": "pending"
+    }
+  ]
+}

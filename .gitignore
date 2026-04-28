@@ -1,0 +1,16 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Environments
+.env
+.env.local
+
+# Node (Root backup)
+node_modules/
+
+# OS
+.DS_Store
