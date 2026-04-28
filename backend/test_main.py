@@ -38,7 +38,8 @@ def test_health_check():
 def test_get_visions():
     response = client.get("/api/visions")
     assert response.status_code == 200
-    assert "pairs" in response.json()
+    data = response.json()
+    assert data["pairs"][0]["name"] == "나"
 
 def test_update_visions():
     # 실제 데이터를 건드리지 않기 위해, 현재 데이터를 읽어온 뒤 

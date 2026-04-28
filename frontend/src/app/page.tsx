@@ -16,7 +16,7 @@ interface VisionData {
 
 export default function Home() {
   const [data, setData] = useState<VisionData | null>(null);
-  const [activeTab, setActiveTab] = useState<string>('family');
+  const [activeTab, setActiveTab] = useState<string>('self');
   const [isLoading, setIsLoading] = useState(false);
 
   // Edit states

@@ -1,9 +1,16 @@
 {
   "pairs": [
     {
+      "id": "self",
+      "name": "나",
+      "providerVision": "나 스스로에게 가장 정직하고, 나 자신의 가능성에 열광하는 첫 번째 팬이 된다.",
+      "customerVision": "내면의 목소리에 귀를 기울이며 매일 성장을 즐기는 삶",
+      "status": "aligned"
+    },
+    {
       "id": "family",
       "name": "가족",
-      "providerVision": "고객의 이야기를 주의 깊게 들어주고 정리될 수 있도록 돕는다",
+      "providerVision": "가장 가까운 고객인 가족에게 조건 없는 지지와 헌신을 제공한다.",
       "customerVision": "서로의 꿈을 지지하고 평온한 안식처가 되는 관계",
       "status": "aligned"
     },
