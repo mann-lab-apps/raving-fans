@@ -1,25 +1,24 @@
 {
-  "provider": {
-    "name": "나 (1인 기업가)",
-    "vision": "수정된 비전 테스트"
-  },
-  "customers": [
+  "pairs": [
     {
       "id": "family",
       "name": "가족",
-      "vision": "서로의 꿈을 지지하고 평온한 안식처가 되는 관계",
+      "providerVision": "수정된 테스트 비전",
+      "customerVision": "서로의 꿈을 지지하고 평온한 안식처가 되는 관계",
       "status": "aligned"
     },
     {
       "id": "company",
       "name": "회사",
-      "vision": "최고의 기술적 탁월함으로 동료들의 신뢰를 얻는 파트너",
+      "providerVision": "최고의 기술적 탁월함으로 동료들의 시간을 아껴주는 서비스를 제공한다.",
+      "customerVision": "최고의 기술적 탁월함으로 동료들의 신뢰를 얻는 파트너",
       "status": "pending"
     },
     {
       "id": "friends",
       "name": "친구",
-      "vision": "언제든 기댈 수 있고 함께 성장하는 즐거운 동반자",
+      "providerVision": "즐거운 에너지를 공유하고 성장을 자극하는 관계를 주도한다.",
+      "customerVision": "언제든 기댈 수 있고 함께 성장하는 즐거운 동반자",
       "status": "pending"
     }
   ]

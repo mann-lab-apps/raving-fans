@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-from backend.models import VisionData, Provider, Customer
+from backend.models import VisionData, VisionPair
 from backend.storage import VisionStorage
 
 app = FastAPI(title="Raving Fans Vision Manager")

@@ -14,22 +14,22 @@ def test_get_visions():
     response = client.get("/api/visions")
     assert response.status_code == 200
     data = response.json()
-    assert "provider" in data
-    assert "customers" in data
-    assert data["provider"]["name"] == "나 (1인 기업가)"
+    assert "pairs" in data
+    assert len(data["pairs"]) > 0
+    assert data["pairs"][0]["name"] == "가족"
 
 def test_update_visions():
     # 현재 데이터 로드
     response = client.get("/api/visions")
     current_data = response.json()
     
-    # 데이터 수정
-    current_data["provider"]["vision"] = "수정된 비전 테스트"
+    # 데이터 수정 (첫 번째 페어의 providerVision 수정)
+    current_data["pairs"][0]["providerVision"] = "수정된 테스트 비전"
     
     response = client.post("/api/visions", json=current_data)
     assert response.status_code == 200
-    assert response.json()["provider"]["vision"] == "수정된 비전 테스트"
+    assert response.json()["pairs"][0]["providerVision"] == "수정된 테스트 비전"
     
     # 다시 읽어서 확인
     response = client.get("/api/visions")
-    assert response.json()["provider"]["vision"] == "수정된 비전 테스트"
+    assert response.json()["pairs"][0]["providerVision"] == "수정된 테스트 비전"
