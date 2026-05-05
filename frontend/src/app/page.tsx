@@ -1,21 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-
-interface VisionPair {
-  id: string;
-  name: string;
-  providerVision: string;
-  customerVision: string;
-  status: string;
-}
-
-interface VisionData {
-  pairs: VisionPair[];
-}
+import { getVisions, updateVisions } from './actions';
+import { VisionPair, VisionStorage } from '@/types/vision';
 
 export default function Home() {
-  const [data, setData] = useState<VisionData | null>(null);
+  const [data, setData] = useState<VisionStorage | null>(null);
   const [activeTab, setActiveTab] = useState<string>('self');
   const [isLoading, setIsLoading] = useState(false);
 
@@ -26,8 +16,7 @@ export default function Home() {
 
   const fetchData = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/visions');
-      const json = await res.json();
+      const json = await getVisions();
       setData(json);
       if (!activeTab && json.pairs.length > 0) {
         setActiveTab(json.pairs[0].id);
@@ -52,25 +41,20 @@ export default function Home() {
         return {
           ...p,
           [target === 'provider' ? 'providerVision' : 'customerVision']: tempVision,
-        };
+          updatedAt: new Date().toISOString(),
+        } as VisionPair;
       }
       return p;
     });
 
-    const newData = { ...data, pairs: updatedPairs };
+    const newData: VisionStorage = { ...data, pairs: updatedPairs };
 
     if (target === 'provider') setEditingProvider(false);
     else setEditingCustomer(false);
 
     try {
-      const res = await fetch('http://localhost:8000/api/visions', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newData),
-      });
-      if (res.ok) {
-        setData(newData);
-      }
+      await updateVisions(newData);
+      setData(newData);
     } catch (err) {
       console.error('Failed to save data:', err);
       alert('저장에 실패했습니다.');
