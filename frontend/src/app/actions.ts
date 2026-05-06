@@ -56,3 +56,48 @@ export async function updateVisions(data: VisionStorage): Promise<void> {
     throw new Error('데이터 저장에 실패했습니다.');
   }
 }
+
+export async function addPersona(name: string): Promise<VisionStorage> {
+  const data = await getVisions();
+  const newPair: VisionPair = {
+    id: `custom-${Date.now()}`,
+    uuid: crypto.randomUUID(),
+    name: name,
+    providerVision: '새로운 제공자 비전을 입력하세요.',
+    customerVision: '새로운 고객 비전을 입력하세요.',
+    status: 'pending',
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+    version: 1
+  };
+  
+  const updatedData = {
+    ...data,
+    pairs: [...data.pairs, newPair]
+  };
+  
+  await updateVisions(updatedData);
+  return updatedData;
+}
+
+export async function deletePersona(id: string): Promise<VisionStorage> {
+  const data = await getVisions();
+  const updatedData = {
+    ...data,
+    pairs: data.pairs.filter(p => p.id !== id)
+  };
+  
+  await updateVisions(updatedData);
+  return updatedData;
+}
+
+export async function renamePersona(id: string, newName: string): Promise<VisionStorage> {
+  const data = await getVisions();
+  const updatedData = {
+    ...data,
+    pairs: data.pairs.map(p => p.id === id ? { ...p, name: newName, updatedAt: new Date().toISOString() } : p)
+  };
+  
+  await updateVisions(updatedData);
+  return updatedData;
+}

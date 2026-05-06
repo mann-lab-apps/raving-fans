@@ -2,11 +2,11 @@
   "pairs": [
     {
       "id": "self",
-      "name": "나",
+      "name": "본인",
       "providerVision": "I am my own most honest first fan",
       "customerVision": "내면의 목소리에 귀를 기울이며 매일 성장을 즐기는 삶",
       "status": "aligned",
-      "updatedAt": "2026-05-06T00:16:35.062Z",
+      "updatedAt": "2026-05-06T00:52:09.206Z",
       "uuid": "f6ff13cc-0623-4456-b369-5666cc4c2a13",
       "createdAt": "2026-05-05T23:50:00.539Z",
       "version": 1
@@ -34,16 +34,49 @@
       "version": 1
     },
     {
-      "id": "friends",
-      "name": "친구",
-      "providerVision": "즐거운 에너지를 공유하고 성장을 자극하는 관계를 주도한다.",
-      "customerVision": "언제든 기댈 수 있고 함께 성장하는 즐거운 동반자",
+      "id": "custom-1778028736968",
+      "uuid": "9b3d9527-1cc7-474b-a02d-4ad8e91fd64f",
+      "name": "ㅁㅁㄴㅇㄹ",
+      "providerVision": "새로운 제공자 비전을 입력하세요.",
+      "customerVision": "새로운 고객 비전을 입력하세요.",
       "status": "pending",
-      "uuid": "f9ecd695-4d5a-4285-8bb2-0404152059a6",
-      "createdAt": "2026-05-05T23:50:00.539Z",
-      "updatedAt": "2026-05-05T23:50:00.539Z",
+      "createdAt": "2026-05-06T00:52:16.968Z",
+      "updatedAt": "2026-05-06T00:52:16.968Z",
+      "version": 1
+    },
+    {
+      "id": "custom-1778028739286",
+      "uuid": "1739295e-0ee7-45dc-a2ff-f28cc1014e75",
+      "name": "ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇ",
+      "providerVision": "새로운 제공자 비전을 입력하세요.",
+      "customerVision": "새로운 고객 비전을 입력하세요.",
+      "status": "pending",
+      "createdAt": "2026-05-06T00:52:19.286Z",
+      "updatedAt": "2026-05-06T00:52:19.286Z",
+      "version": 1
+    },
+    {
+      "id": "custom-1778028742252",
+      "uuid": "3d04d020-8674-4776-ba04-15e8170c4cca",
+      "name": "ㅁㄴㅇㄹㅂㅈㄷㄱㅂㄷㅈㄱㅂㅈㄷㄱㅂㅈㄷ",
+      "providerVision": "새로운 제공자 비전을 입력하세요.",
+      "customerVision": "새로운 고객 비전을 입력하세요.",
+      "status": "pending",
+      "createdAt": "2026-05-06T00:52:22.252Z",
+      "updatedAt": "2026-05-06T00:52:22.252Z",
+      "version": 1
+    },
+    {
+      "id": "custom-1778028744653",
+      "uuid": "1e61dd97-efa0-4c00-9932-7d47c5b69f99",
+      "name": "ㅇㄹㅁㄴㅇ",
+      "providerVision": "123",
+      "customerVision": "새로운 고객 비전을 입력하세요.",
+      "status": "pending",
+      "createdAt": "2026-05-06T00:52:24.653Z",
+      "updatedAt": "2026-05-06T00:52:32.346Z",
       "version": 1
     }
   ],
-  "lastModified": "2026-05-06T00:16:35.080Z"
+  "lastModified": "2026-05-06T00:52:32.363Z"
 }
