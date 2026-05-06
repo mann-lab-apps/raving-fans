@@ -3,10 +3,10 @@
     {
       "id": "self",
       "name": "나",
-      "providerVision": "I am my own most honest first fan (Test Update)",
+      "providerVision": "I am my own most honest first fan",
       "customerVision": "내면의 목소리에 귀를 기울이며 매일 성장을 즐기는 삶",
       "status": "aligned",
-      "updatedAt": "2026-05-05T23:53:31.539Z",
+      "updatedAt": "2026-05-06T00:16:35.062Z",
       "uuid": "f6ff13cc-0623-4456-b369-5666cc4c2a13",
       "createdAt": "2026-05-05T23:50:00.539Z",
       "version": 1
@@ -45,5 +45,5 @@
       "version": 1
     }
   ],
-  "lastModified": "2026-05-05T23:53:31.549Z"
+  "lastModified": "2026-05-06T00:16:35.080Z"
 }
