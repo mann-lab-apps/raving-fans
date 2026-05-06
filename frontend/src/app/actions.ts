@@ -5,10 +5,35 @@ import path from 'path';
 import { VisionStorage, VisionPair } from '@/types/vision';
 import crypto from 'crypto';
 
-const DATA_PATH = path.join(process.cwd(), '../data/visions.json');
+const DATA_PATH = path.join(process.cwd(), 'src/data/visions.json');
+
+const DEFAULT_DATA: VisionStorage = {
+  pairs: [
+    {
+      id: 'self',
+      uuid: crypto.randomUUID(),
+      name: '나 자신',
+      providerVision: '나의 비전은 무엇인가요?',
+      customerVision: '내가 생각하는 나의 모습은?',
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      version: 1
+    }
+  ],
+  lastModified: new Date().toISOString()
+};
 
 export async function getVisions(): Promise<VisionStorage> {
   try {
+    // 파일 존재 확인
+    try {
+      await fs.access(DATA_PATH);
+    } catch {
+      console.warn('visions.json not found, using default data');
+      return DEFAULT_DATA;
+    }
+
     const content = await fs.readFile(DATA_PATH, 'utf-8');
     const data = JSON.parse(content);
     
@@ -40,7 +65,7 @@ export async function getVisions(): Promise<VisionStorage> {
     return finalData;
   } catch (error) {
     console.error('Failed to read visions.json:', error);
-    throw new Error('데이터를 불러오는데 실패했습니다.');
+    return DEFAULT_DATA; // 에러 발생 시 앱이 죽지 않도록 기본값 반환
   }
 }
 
@@ -52,8 +77,8 @@ export async function updateVisions(data: VisionStorage): Promise<void> {
     };
     await fs.writeFile(DATA_PATH, JSON.stringify(updatedData, null, 2), 'utf-8');
   } catch (error) {
-    console.error('Failed to write visions.json:', error);
-    throw new Error('데이터 저장에 실패했습니다.');
+    // Vercel 등 읽기 전용 환경에서는 쓰기 실패를 조용히 넘김 (서버 로그만 남김)
+    console.warn('Failed to write visions.json (possibly read-only environment):', error);
   }
 }
 
