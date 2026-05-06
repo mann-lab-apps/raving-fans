@@ -34,36 +34,14 @@
       "version": 1
     },
     {
-      "id": "custom-1778028736968",
-      "uuid": "9b3d9527-1cc7-474b-a02d-4ad8e91fd64f",
-      "name": "ㅁㅁㄴㅇㄹ",
-      "providerVision": "새로운 제공자 비전을 입력하세요.",
-      "customerVision": "새로운 고객 비전을 입력하세요.",
-      "status": "pending",
-      "createdAt": "2026-05-06T00:52:16.968Z",
-      "updatedAt": "2026-05-06T00:52:16.968Z",
-      "version": 1
-    },
-    {
-      "id": "custom-1778028739286",
-      "uuid": "1739295e-0ee7-45dc-a2ff-f28cc1014e75",
-      "name": "ㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇㄹㅁㄴㅇ",
-      "providerVision": "새로운 제공자 비전을 입력하세요.",
-      "customerVision": "새로운 고객 비전을 입력하세요.",
-      "status": "pending",
-      "createdAt": "2026-05-06T00:52:19.286Z",
-      "updatedAt": "2026-05-06T00:52:19.286Z",
-      "version": 1
-    },
-    {
       "id": "custom-1778028742252",
       "uuid": "3d04d020-8674-4776-ba04-15e8170c4cca",
-      "name": "ㅁㄴㅇㄹㅂㅈㄷㄱㅂㄷㅈㄱㅂㅈㄷㄱㅂㅈㄷ",
-      "providerVision": "새로운 제공자 비전을 입력하세요.",
+      "name": "ㅁ",
+      "providerVision": "새로운 제공자 비전을 입력하세요.ㅁㅁㅁ",
       "customerVision": "새로운 고객 비전을 입력하세요.",
       "status": "pending",
       "createdAt": "2026-05-06T00:52:22.252Z",
-      "updatedAt": "2026-05-06T00:52:22.252Z",
+      "updatedAt": "2026-05-06T04:43:08.453Z",
       "version": 1
     },
     {
@@ -78,5 +56,5 @@
       "version": 1
     }
   ],
-  "lastModified": "2026-05-06T00:52:32.363Z"
+  "lastModified": "2026-05-06T04:43:19.837Z"
 }
