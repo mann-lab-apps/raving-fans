@@ -14,11 +14,11 @@
 | ID  | Category | Feature (Requirement) | Page ID | Priority | Status | Test Case |
 |:----|:---------|:----------------------|:--------|:---------|:-------|:----------|
 | F01 | Design | Premium Design System (CSS, Typography, Glassmorphism) | ALL | P2 | Pending | - |
-| F02 | Vision | 팀 비전(이상적인 산책) 정의 및 관리 | P02 | P1 | Pending | `Vision.F02.test.tsx` |
-| F03 | Vision | 고객 비전(바라는 산책) 정의 및 관리 | P02 | P1 | Pending | `Vision.F03.test.tsx` |
-| F04 | Scoring | 활동 세션 점수(흥미, 생산성) 기록 및 수정 | P03 | P1 | Pending | `Score.F04.test.tsx` |
-| F05 | Visual | 5x5 매트릭스 좌표평면 시각화 | P01 | P1 | Pending | `Matrix.F05.test.tsx` |
-| F06 | Visual | 비전 정렬 다이아그램 시각화 | P01 | P1 | Pending | `Diagram.F06.test.tsx` |
+| F02 | Vision | 팀 비전 수립 및 점수화 (내용 + 흥미/생산성) | P02 | P1 | Pending | `Vision.F02.test.tsx` |
+| F03 | Vision | 고객 비전 수립 및 점수화 (내용 + 흥미/생산성) | P02 | P1 | Pending | `Vision.F03.test.tsx` |
+| F04 | Status | 현재 활동 상태 기록 및 점수화 (내용 + 흥미/생산성) | P03 | P1 | Pending | `Score.F04.test.tsx` |
+| F05 | History | 비전 및 활동의 변화 이력(Snapshot) 관리 | ALL | P1 | Pending | `Data.F05.test.tsx` |
+| F06 | Visual | 5x5 매트릭스 (팀 vs 고객 vs 현재 상태 정렬 시각화) | P01 | P1 | Pending | `Matrix.F06.test.tsx` |
 | F07 | Data | 로컬 JSON/LocalStorage 데이터 저장 핸들러 | ALL | P1 | Pending | `Data.F07.test.tsx` |
 | F08 | PWA | PWA 매니페스트 및 서비스 워커 설정 | ALL | P2 | Pending | - |
 | F09 | PWA | 리텐션을 위한 푸시 알림 기능 | ALL | P2 | Pending | - |
